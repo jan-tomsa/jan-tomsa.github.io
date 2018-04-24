@@ -30,41 +30,46 @@ and is wrapped around the whole page content, except for the footer in this exam
     
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-    <!--img src="/w3images/woods.jpg" alt="Nature" style="width:100%"-->
+    <img src="images/PiGO_IoBDP_components_3.png" alt="PiGO module" style="width:100%">
     <div class="w3-container">
-      <h3><b>Construction</b></h3>
-      <h5>How the module is constructed<!--span class="w3-opacity">April 7, 2014</span--></h5>
+      <h3><b>Description</b></h3>
+      <h5><!--span class="w3-opacity">April 7, 2014</span--></h5>
     </div>
 
-    <div class="w3-container w3-orange" title="Web work in progress...">
-    <p>TO DO: add description</p>
-    <p>Components:</p>
-    <ul>
-	    <li>Arduino Pro Mini</li>
-	    <li>Double H-bridge driver</li>
-	    <li>LEGO&reg; Power Functions connectors</li>
-    </ul>
+    <div class="w3-container">
+    <p>PiGO enables construction of LEGO&reg; models controlled by an application running on Raspberry Pi.</p>
+    <p>In the current version Raspberry Pi hosts a Node.js web application that enables user to directly control motors that are attached to the connectors of PiGO.</p>
+    <p>I am planning to add some kind of Scratch-like programming capabilities to the web application.</p>
     </div>
   </div>
   <hr>
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-    <!--img src="/w3images/woods.jpg" alt="Nature" style="width:100%"-->
+    <!--img src="images/PiGO_IoBDP_components_3.png" alt="PiGO module" style="width:100%"-->
     <div class="w3-container">
-      <h3><b>Program</b></h3>
-      <h5>How the controller is programmed<!--span class="w3-opacity">April 7, 2014</span--></h5>
+      <h3><b>Construction</b></h3>
+      <h5>How the module is constructed and programmed<!--span class="w3-opacity">April 7, 2014</span--></h5>
     </div>
 
-    <div class="w3-container w3-orange" title="Web work in progress...">
-	    <p>Node.js</p>
-	    <p>Johnny-five</p>
-	    <p>Express</p>
-    </div>
     <div class="w3-container">
+    <p>The PiGO module consists of following components:</p>
+    <ul>
+	    <li>Arduino Pro Mini</li>
+	    <li>Dual H-bridge driver(s)</li>
+	    <li>LEGO&reg; Power Functions connectors</li>
+    </ul>
+    <p>Arduino is programmed with <a href="https://www.arduino.cc/en/Reference/Firmata">Standard Firmata</a> which enables control from the computer via USB.</p>
+    <p>Raspberry Pi hosts a <b>Node.js</b> web application that uses the <a href="https://github.com/rwaldron/johnny-five">Johnny-five</a> library to control Arduino.</p> 
+    <p>Arduino controls motors via a dual H-bridge controlled by two pairs of PWM pins - 5+6 and 10+11 (more in preparation)</p>
+    <p>The LEGO&reg; Power Functions motors are connected to the output pins of dual H-bridge.
+    </div>
+   <div class="w3-container">
 	    <p>Source code: <a href="https://github.com/jan-tomsa/pi_go">https://github.com/jan-tomsa/pi_go</a></p>
     </div>
   </div>
+  <hr>
+
   <hr>
 
   
@@ -78,7 +83,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container w3-yellow" title="Programming work in progress...">
-    <p>In preparation ... not much programming available at this moment - current version of SW allows direct controlling only.</p>
+    <p>In preparation ... programming isnt available at this moment - current version of SW allows direct controlling only.</p>
     </div>
   </div>
   <hr>
